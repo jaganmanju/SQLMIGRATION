@@ -54,6 +54,10 @@
 				],
 				"userProperties": [],
 				"typeProperties": {
+					"expression": {
+						"value": "@or(equals(pipeline().parameters.LastLoadValue, null), greater(int(activity('LKUP_MAX VALUE').output.firstRow.MaxValue), int(pipeline().parameters.LastLoadValue)))",
+						"type": "Expression"
+					},
 					"ifTrueActivities": [
 						{
 							"name": "CPY_FULL_CTLOAD",
@@ -171,7 +175,7 @@
 										"value": "@pipeline().parameters.TableSchema",
 										"type": "Expression"
 									},
-									"WatemarkColumn": {
+									"WatermarkColumn": {
 										"value": "@pipeline().parameters.WatermarkColumn",
 										"type": "Expression"
 									},
