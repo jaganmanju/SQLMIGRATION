@@ -1,0 +1,19 @@
+{
+	"name": "DS_SINKEVENTTRIGGER",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "LS_SINKEVENTTRIGGER",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Json",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"container": "outputjson"
+			}
+		},
+		"schema": {}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

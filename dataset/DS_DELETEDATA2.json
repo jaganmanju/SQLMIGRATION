@@ -1,0 +1,19 @@
+{
+	"name": "DS_DELETEDATA2",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "LS_DELETEDATA2",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Binary",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileName": "data_27df0e6d-6257-4a5f-8e1d-9f5c1b6529b6_529910da-3ab5-42c8-b00d-d5459c0d2016.parquet",
+				"fileSystem": "output"
+			}
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

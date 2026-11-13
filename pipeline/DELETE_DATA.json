@@ -1,0 +1,42 @@
+{
+	"name": "DELETE_DATA",
+	"properties": {
+		"activities": [
+			{
+				"name": "Delete1",
+				"type": "Delete",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "0.12:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"dataset": {
+						"referenceName": "DS_DELETEDATA2",
+						"type": "DatasetReference"
+					},
+					"logStorageSettings": {
+						"linkedServiceName": {
+							"referenceName": "LS_DELETEDATA2",
+							"type": "LinkedServiceReference"
+						},
+						"path": "output/1efd94ee-46ee-4780-9646-3bdc48434f32"
+					},
+					"enableLogging": true,
+					"storeSettings": {
+						"type": "AzureBlobFSReadSettings",
+						"fileListPath": "output/data_27df0e6d-6257-4a5f-8e1d-9f5c1b6529b6_529910da-3ab5-42c8-b00d-d5459c0d2016.parquet",
+						"enablePartitionDiscovery": false
+					}
+				}
+			}
+		],
+		"annotations": [],
+		"lastPublishTime": "2026-11-03T13:34:56Z"
+	},
+	"type": "Microsoft.DataFactory/factories/pipelines"
+}

@@ -1,0 +1,72 @@
+{
+	"name": "DS_FOREACH_ACTIVITY",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "LS_FOREACH_ACTIVITY",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"container": "input"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": [
+			{
+				"name": "year",
+				"type": "String"
+			},
+			{
+				"name": "make",
+				"type": "String"
+			},
+			{
+				"name": "model",
+				"type": "String"
+			},
+			{
+				"name": "trim",
+				"type": "String"
+			},
+			{
+				"name": "body",
+				"type": "String"
+			},
+			{
+				"name": "condition",
+				"type": "String"
+			},
+			{
+				"name": "odometer",
+				"type": "String"
+			},
+			{
+				"name": "color",
+				"type": "String"
+			},
+			{
+				"name": "interior",
+				"type": "String"
+			},
+			{
+				"name": "seller",
+				"type": "String"
+			},
+			{
+				"name": "mmr",
+				"type": "String"
+			},
+			{
+				"name": "sellingprice",
+				"type": "String"
+			}
+		]
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

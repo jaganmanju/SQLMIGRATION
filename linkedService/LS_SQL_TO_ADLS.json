@@ -1,0 +1,21 @@
+{
+	"name": "LS_SQL_TO_ADLS",
+	"type": "Microsoft.DataFactory/factories/linkedservices",
+	"properties": {
+		"annotations": [],
+		"type": "SqlServer",
+		"typeProperties": {
+			"server": "RISHEEK\\SQLEXPRESS",
+			"database": "AdventureWorks2025",
+			"encrypt": "mandatory",
+			"trustServerCertificate": true,
+			"authenticationType": "SQL",
+			"userName": "Manjunath",
+			"encryptedCredential": "eyJDcmVkZW50aWFsSWQiOiJiZGUxODkwZS1lMzc0LTRmM2EtODEzMS00MmY4YzhmNTM2MTAiLCJWZXJzaW9uIjoiMi4wIiwiQ2xhc3NUeXBlIjoiTWljcm9zb2Z0LkRhdGFQcm94eS5Db3JlLkludGVyU2VydmljZURhdGFDb250cmFjdC5DcmVkZW50aWFsU1UwNkNZMTQifQ=="
+		},
+		"connectVia": {
+			"referenceName": "integrationRuntime1",
+			"type": "IntegrationRuntimeReference"
+		}
+	}
+}
