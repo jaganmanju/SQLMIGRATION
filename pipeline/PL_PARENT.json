@@ -30,6 +30,43 @@
 					},
 					"firstRowOnly": false
 				}
+			},
+			{
+				"name": "FEACH_TABLES",
+				"type": "ForEach",
+				"dependsOn": [
+					{
+						"activity": "LKUP_WATERMARK TABLE",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
+				"userProperties": [],
+				"typeProperties": {
+					"items": {
+						"value": "@activity('LKUP_WATERMARK TABLE').output.value",
+						"type": "Expression"
+					},
+					"activities": [
+						{
+							"name": "EXE_SQL_INCREMENTAL",
+							"type": "ExecutePipeline",
+							"dependsOn": [],
+							"policy": {
+								"secureInput": false
+							},
+							"userProperties": [],
+							"typeProperties": {
+								"pipeline": {
+									"referenceName": "PL_CHILD",
+									"type": "PipelineReference"
+								},
+								"waitOnCompletion": true
+							}
+						}
+					]
+				}
 			}
 		],
 		"annotations": []
