@@ -62,7 +62,25 @@
 									"referenceName": "PL_CHILD",
 									"type": "PipelineReference"
 								},
-								"waitOnCompletion": true
+								"waitOnCompletion": true,
+								"parameters": {
+									"TableName": {
+										"value": "@item().TableName",
+										"type": "Expression"
+									},
+									"TableSchema": {
+										"value": "@item().TableSchema",
+										"type": "Expression"
+									},
+									"WatermarkColumn": {
+										"value": "@item().WatemarkColumn",
+										"type": "Expression"
+									},
+									"LastLoadValue": {
+										"value": "@item().LastLoadValue",
+										"type": "Expression"
+									}
+								}
 							}
 						}
 					]

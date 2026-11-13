@@ -1,5 +1,5 @@
 {
-	"name": "DS_CPYFULL",
+	"name": "DS_CPYFULL_SOURCE",
 	"properties": {
 		"linkedServiceName": {
 			"referenceName": "LS_CPYFULL",

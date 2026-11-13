@@ -98,7 +98,7 @@
 							},
 							"inputs": [
 								{
-									"referenceName": "DS_CPYFULL",
+									"referenceName": "DS_CPYFULL_SOURCE",
 									"type": "DatasetReference",
 									"parameters": {
 										"TableSchema": {
@@ -119,9 +119,68 @@
 							"outputs": [
 								{
 									"referenceName": "DS_CPYFULL_SINK",
-									"type": "DatasetReference"
+									"type": "DatasetReference",
+									"parameters": {
+										"TableName": {
+											"value": "@pipeline().parameters.TableName",
+											"type": "Expression"
+										},
+										"TableSChema": {
+											"value": "@pipeline().parameters.TableSchema",
+											"type": "Expression"
+										},
+										"WatermarkColumn": {
+											"value": "@pipeline().parameters.WatermarkColumn",
+											"type": "Expression"
+										},
+										"LastLoadValue": {
+											"value": "@pipeline().parameters.LastLoadValue",
+											"type": "Expression"
+										}
+									}
 								}
 							]
+						},
+						{
+							"name": "EXE_SP_PIPELINE",
+							"type": "ExecutePipeline",
+							"dependsOn": [
+								{
+									"activity": "CPY_FULL_CTLOAD",
+									"dependencyConditions": [
+										"Succeeded"
+									]
+								}
+							],
+							"policy": {
+								"secureInput": false
+							},
+							"userProperties": [],
+							"typeProperties": {
+								"pipeline": {
+									"referenceName": "CHILDPIPELINE_SP",
+									"type": "PipelineReference"
+								},
+								"waitOnCompletion": true,
+								"parameters": {
+									"TableName": {
+										"value": "@pipeline().parameters.TableName",
+										"type": "Expression"
+									},
+									"TableSchema": {
+										"value": "@pipeline().parameters.TableSchema",
+										"type": "Expression"
+									},
+									"WatemarkColumn": {
+										"value": "@pipeline().parameters.WatermarkColumn",
+										"type": "Expression"
+									},
+									"LastLoadValue": {
+										"value": "@pipeline().parameters.LastLoadValue",
+										"type": "Expression"
+									}
+								}
+							}
 						}
 					]
 				}
