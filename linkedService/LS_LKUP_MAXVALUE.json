@@ -1,0 +1,21 @@
+{
+	"name": "LS_LKUP_MAXVALUE",
+	"type": "Microsoft.DataFactory/factories/linkedservices",
+	"properties": {
+		"annotations": [],
+		"type": "SqlServer",
+		"typeProperties": {
+			"server": "RISHEEK\\SQLEXPRESS",
+			"database": "onprem_migration",
+			"encrypt": "optional",
+			"trustServerCertificate": false,
+			"authenticationType": "SQL",
+			"userName": "Manjunath",
+			"encryptedCredential": "eyJDcmVkZW50aWFsSWQiOiIxOTMyODRmMy0xNDc4LTQ2NTAtODhjOC1lZDQ2MTQ4NzdiYmMiLCJWZXJzaW9uIjoiMi4wIiwiQ2xhc3NUeXBlIjoiTWljcm9zb2Z0LkRhdGFQcm94eS5Db3JlLkludGVyU2VydmljZURhdGFDb250cmFjdC5DcmVkZW50aWFsU1UwNkNZMTQifQ=="
+		},
+		"connectVia": {
+			"referenceName": "integrationRuntime1",
+			"type": "IntegrationRuntimeReference"
+		}
+	}
+}
