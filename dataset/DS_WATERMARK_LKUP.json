@@ -1,0 +1,12 @@
+{
+	"name": "DS_WATERMARK_LKUP",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "LS_WATERMARK_LKUP",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "SqlServerTable",
+		"schema": []
+	}
+}
