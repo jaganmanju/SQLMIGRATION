@@ -33,7 +33,7 @@
 						},
 						"WatermarkColumn": {
 							"value": {
-								"value": "@pipeline().parameters.WatemarkColumn",
+								"value": "@pipeline().parameters.WatermarkColumn",
 								"type": "Expression"
 							},
 							"type": "String"
@@ -53,7 +53,7 @@
 			"TableSchema": {
 				"type": "string"
 			},
-			"WatemarkColumn": {
+			"WatermarkColumn": {
 				"type": "string"
 			},
 			"LastLoadValue": {
