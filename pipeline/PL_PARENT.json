@@ -48,6 +48,7 @@
 						"value": "@activity('LKUP_WATERMARK TABLE').output.value",
 						"type": "Expression"
 					},
+					"isSequential": false,
 					"activities": [
 						{
 							"name": "EXE_SQL_INCREMENTAL",
@@ -73,7 +74,7 @@
 										"type": "Expression"
 									},
 									"WatermarkColumn": {
-										"value": "@item().WatemarkColumn",
+										"value": "@item().WatermarkColumn",
 										"type": "Expression"
 									},
 									"LastLoadValue": {
